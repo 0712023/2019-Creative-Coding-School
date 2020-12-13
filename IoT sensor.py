@@ -12,21 +12,19 @@ if val2 = LOW:
 else:
     counter2 = 0
 
-# counting toward outside
-if counter1 != 0:
-    s1 = 1
-    if s1 = 1:
-        if counter2 != 0:
-            s2 = 1
-            n -= 1
-        s1 = 0
-        s2 = 0
-# counting toward inside
-if counter2 != 0:
-    s2 = 1
-    if s2 = 1:
-        if counter1 != 0:
-            s1 = 1
-            n += 1
-        s1 = 0
-        s2 = 0
+while true:
+    # counting toward outside
+    if counter1 != 0:
+        s1 += 1
+        if s1 != 0:
+            if counter2 != 0:
+                n -= 1
+                s1 -= 1
+    # counting toward inside
+    if counter2 != 0:
+        s2 += 1
+        if s2 = 1:
+            if counter1 != 0:
+                n += 1
+                s2 -= 1
+    if s1 + s2 != 0:

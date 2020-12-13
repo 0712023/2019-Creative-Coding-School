@@ -250,9 +250,13 @@ int main(int argc, char *argv[])
       int val2; // 2 is outside
     while (1)
     {
-      val1 = read_adc(0);
-      val2 = read_adc(2);
-      if (val1 > 50){
+      if (read_adc(0) > 15){
+        val1 = read_adc(0);
+      }
+      if (read_adc(2) > 15){
+        val2 = read_adc(2);
+      }
+      if (val1 > 40){
         counter1++;
       }else{
         counter1 = 0;
@@ -261,7 +265,7 @@ int main(int argc, char *argv[])
         s1++;
       }
 
-      if (val2 > 50){
+      if (val2 > 40){
         counter2++;
       }else{
         counter2 = 0;
@@ -278,18 +282,22 @@ int main(int argc, char *argv[])
       {
         while (s1 != 0)
         {
-               up_mdelay(500);
-          val1 = read_adc(0);
-          val2 = read_adc(2);
+          up_mdelay(500);
+          if (read_adc(0) > 15){
+            val1 = read_adc(0);
+          }
+          if (read_adc(2) > 15){
+            val2 = read_adc(2);
+          }
            printf("s1 is %d, num is %d and val1 is %d, val2 is %d\n",s1, num, val1, val2);
-          if (val1 > 50){
+          if (val1 > 40){
             counter1++;
           }else{
             counter1 = 0;
           }if (counter1 == 1){
             s1++;
           }
-          if (val2 > 50){
+          if (val2 > 40){
             counter2++;
             if (counter2 == 1){
               s1--;
@@ -309,18 +317,22 @@ int main(int argc, char *argv[])
 
         while (s2 != 0)
         {
-               up_mdelay(500);
-          val1 = read_adc(0);
-          val2 = read_adc(2);
+          up_mdelay(500);
+          if (read_adc(0) > 15){
+            val1 = read_adc(0);
+          }
+          if (read_adc(2) > 15){
+            val2 = read_adc(2);
+          }
            printf("s2 is %d, num is %d and val1 is %d, val2 is %d\n",s2, num, val1, val2);
-          if (val2 > 50){
+          if (val2 > 40){
             counter2++;
           }else{
             counter2 = 0;
           }if (counter2 == 1){
             s2++;
           }
-          if (val1 > 50){
+          if (val1 > 40){
             counter1++;
             if (counter1 == 1)
             {
