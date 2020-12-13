@@ -250,13 +250,13 @@ int main(int argc, char *argv[])
       int val2; // 2 is outside
     while (1)
     {
-      if (read_adc(0) > 15){
+      if (read_adc(0) > 15 && read_adc(0) < 100){
         val1 = read_adc(0);
       }
-      if (read_adc(2) > 15){
+      if (read_adc(2) > 15 && read_adc(2) < 150){
         val2 = read_adc(2);
       }
-      if (val1 > 40){
+      if (val1 > 50){
         counter1++;
       }else{
         counter1 = 0;
@@ -265,7 +265,7 @@ int main(int argc, char *argv[])
         s1++;
       }
 
-      if (val2 > 40){
+      if (val2 > 60){
         counter2++;
       }else{
         counter2 = 0;
@@ -276,28 +276,28 @@ int main(int argc, char *argv[])
 
       {
         printf("\nval1 is %d, val2 is %d\nnum is %d\ncounter1 is %d, counter2 is %d\n", val1, val2,num, counter1, counter2);
-        up_mdelay(2000);
+        up_mdelay(500);
       }
       if (s1 + s2 != 0)
       {
         while (s1 != 0)
         {
           up_mdelay(500);
-          if (read_adc(0) > 15){
+          if (read_adc(0) > 15 && read_adc(0) < 100){
             val1 = read_adc(0);
           }
-          if (read_adc(2) > 15){
+          if (read_adc(2) > 15 && read_adc(2) < 150){
             val2 = read_adc(2);
           }
            printf("s1 is %d, num is %d and val1 is %d, val2 is %d\n",s1, num, val1, val2);
-          if (val1 > 40){
+          if (val1 > 50){
             counter1++;
           }else{
             counter1 = 0;
           }if (counter1 == 1){
             s1++;
           }
-          if (val2 > 40){
+          if (val2 > 60){
             counter2++;
             if (counter2 == 1){
               s1--;
@@ -318,21 +318,21 @@ int main(int argc, char *argv[])
         while (s2 != 0)
         {
           up_mdelay(500);
-          if (read_adc(0) > 15){
+          if (read_adc(0) > 15 && read_adc(0) < 100){
             val1 = read_adc(0);
           }
-          if (read_adc(2) > 15){
+          if (read_adc(2) > 15 && read_adc(2) < 150){
             val2 = read_adc(2);
           }
            printf("s2 is %d, num is %d and val1 is %d, val2 is %d\n",s2, num, val1, val2);
-          if (val2 > 40){
+          if (val2 > 60){
             counter2++;
           }else{
             counter2 = 0;
           }if (counter2 == 1){
             s2++;
           }
-          if (val1 > 40){
+          if (val1 > 50){
             counter1++;
             if (counter1 == 1)
             {

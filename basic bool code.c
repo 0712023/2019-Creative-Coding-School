@@ -17,6 +17,7 @@ while (1)
   strcpy(str,"{\"Sensors\":{");
   struct adc_msg_s samples[ADC_MAX_SAMPLES];
   char tempBuf[20];
+  sprintf(tempBuf,"\"temperature\":%.1f", num ); strcat(str,tempBuf); strcat(str,"}}");
 
   val1 = read_adc(0);
   val2 = read_adc(2);
@@ -62,13 +63,13 @@ while (1)
           s1--;
           num--;
         }
-      }else{
+        }
+      else{
         counter2 = 0;
       }
-
-      mqtt_publish(pClientHandle, MESSAGE_TOPIC, str, sizeof(str)
-
+      mqtt_publish(pClientHandle, MESSAGE_TOPIC, str, sizeof(str));
     }
+
 
     while (s2 != 0)
     {
@@ -92,9 +93,7 @@ while (1)
       }else{
         counter1 = 0;
       }
-
-      mqtt_publish(pClientHandle, MESSAGE_TOPIC, str, sizeof(str)
-
+      mqtt_publish(pClientHandle, MESSAGE_TOPIC, str, sizeof(str));
     }
   }
 }
