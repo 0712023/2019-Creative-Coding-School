@@ -1,4 +1,4 @@
-# 2019 Creative Coding School
+# 2019 Creative IoT Coding School
 
 ## Project Synopsis
 - 행사명 : 2019 IoT 창의 코딩스쿨
