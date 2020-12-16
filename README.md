@@ -10,4 +10,4 @@
 
 ## Outcome
 * Demo Video
-![demovideo](https://i.imgur.com/E6FrJjf.gif)
+![demovideo](https://i.imgur.com/OjymiGy.gif)
