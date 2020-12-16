@@ -15,7 +15,7 @@ Fitness center 환경을 가정하여 이용자가 직접 방문하지 않고도
 - Samsung ARTIK<br><img src=https://static.htecgroup.com/uploads/2018/07/artic.png width="200"><img src=https://www.cnx-software.com/wp-content/uploads/2016/10/Samsung-Artik-0-Development-Kit.jpg width="120" height="90">
   - 지금은 종료된 프로젝트인 삼성 Artik은 Raspberry pi와 같이 IoT platform으로 볼 수 있지만 좀더 보안성에 중점을 두었고, Artik 보드를 이용한 다양한 IoT 기기간의 연동성이 우수하다는 장점이 있습니다. 하지만 타 IoT platform에 비해 소스코드가 매우 적고, 커뮤니티가 활성화되지 않아 일반인보다는 전문가용으로 많이 쓰이고 있습니다.
   - 이번 프로젝트에서 사용한 Artik 5 kit는 Artik 5 보드 외에 led, switch, IR, speaker 등 다양한 센서 모듈이 함께 제공되어 직접 IoT system을 구축하는 데에 적합했습니다.
-- App Inventor<br>&emsp;![appinventor](https://appinventor.mit.edu/images/logo.png)
+- <a href="https://appinventor.mit.edu/">App Inventor</a><br>&emsp;![appinventor](https://appinventor.mit.edu/images/logo.png)
   - MIT에서 개발한 App Inventor를 통해 누구나 간단하게 mobile application을 제작할 수 있습니다.
   - 이번 프로젝트에서 Artik에서 mqtt를 통해 Artik cloud에 fitness center 사용 인원 정보를 전달하고, App Inventor를 활용하여 Artik cloud에서 같은 정보를 전달받아 최종적으로 사용자가 데이터를 확인할 수 있도록 했습니다.
 - C
