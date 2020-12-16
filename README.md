@@ -30,8 +30,8 @@ Tinkercad를 활용하여 직접 제가 원하는 사이즈의 3D 화분을 구�
 
 ### Final Project: 헬스장 실시간 혼잡도 파악
 - 출입문
-  - 설계 : 실제 fitness center 출입문을 토대로 여닫이 문으로 가정했습니다.<br><p align="center"><img src="https://i.imgur.com/b0IcSj7.png" width="200"><img src="https://i.imgur.com/hwrCXn3.png" width="200"></p><br>
-  - IR Sensor를 출입문 위쪽 실내&#183;외에 하나씩 장착하여 사람이 지나갔는지를 체크합니다. 사람 외에 문짝이 센서를 지나갈 수 있어 센서와 물체와의 거리에 구체적인 차등을 두어 물체가 지나갔을 때 그 물체가 사람인지, 문짝인지를 구별할 수 있게 하였습니다. 구체적인 값은 다음 표와 같습니다.<br>
+  - 실제 fitness center 출입문을 토대로 여닫이 문으로 가정했습니다.<br><p align="center"><img src="https://i.imgur.com/b0IcSj7.png" width="200"><img src="https://i.imgur.com/hwrCXn3.png" width="200"></p><br>
+  - IR Sensor를 출입문 위쪽 실내&#183;외에 하나씩 장착하여 사람이 지나갔는지를 체크합니다. 사람 외에 문짝이 센서를 지나갈 수 있어 센서와 물체와의 거리에 구체적인 차등을 두어 물체가 지나갔을 때 그 물체가 사람인지, 문짝인지를 구별할 수 있게 하였습니다. IR sensor는 적외선 센서로, 적외선을 쏘아 물체에 부딪힌 후 돌아오는 시간을 통해 물체와의 거리를 측정하는 센서입니다. 값이 클수록 물체와의 거리가 가깝고, 값이 작을수록 물체와의 거리가 멉니다. 구체적인 값은 다음 표와 같습니다.<br>
   <table border="1">
   	<th>센서</th>
   	<th>물체까지의 거리</th>
@@ -48,11 +48,37 @@ Tinkercad를 활용하여 직접 제가 원하는 사이즈의 3D 화분을 구�
   			<td>10~30</td>
   	</tr>
   </table>
-<br>
+실내 센서 &xrarr; 실외 센서 : 인원 1 감소<br>
+실외 센서 &xrarr; 실내 센서 : 인원 1 증가<br>
+  - 혼잡도
+      - Fitness center를 이용하기에 쾌적한 인원 기준은 fitness center의 규모에 따라 다르지만 demo에서는 빠른 시연을 위해 다음 표를 기준으로 결과를 도출해냈습니다.<br>
+  <table border="1">
+  	<th>인원</th>
+  	<th>현황</th>
+  	<tr>
+  	    <td>2</td>
+  			<td>한산</td>
+  	</tr>
+  	<tr>
+  	    <td>3</td>
+  			<td>혼잡</td>
+  	</tr>
+    <tr>
+  	    <td>4</td>
+  			<td>매우혼잡</td>
+  	</tr>
+  </table>
 
+  - MQTT
+    - 삼성 Artik이 지원하는 기본 cloud로 온도, 시간, 등 다양한 데이터를 전송할 수 있는데 온라인 상에서 가장 많이 쓰이는 통신 프로토콜 중 하나인 mqtt를 활용하여 fitness center 이용자 수 데이터를 전송했습니다.
+  - App Inventor
+    - App Inventor를 활용하여 간단하게 Artik cloud에서 fitness center 이용자 수 데이터를 받아 그 결과를 화면에 출력되게 하는 mobile application을 개발했습니다. 최종 시연회에 이 app을 간단히 다운로드 받을 수 있는 QR코드를 배포하여 실시간으로 값이 변화하는 것을 각자의 모바일 기기에서 쉽게 확인할 수 있었습니다.
+  <p align="center"><img src="https://i.imgur.com/JdVgnDL.png" width="200"> <img src="https://i.imgur.com/B42uzlf.png" width="200"></p>
 
-### Result
-- Demo Video<br>
+### Demo Video
+<p align="center">
 <img src = https://i.imgur.com/OjymiGy.gif width = "400">
+</p>
 
 ## Review
+실내 인원을 측정하는 IoT system은 위 프로젝트와 같이 fitness center 뿐만 아니라 많은 사람들이 이용하는 공용화장실, 공중전화, ATM, 등 다양한 분야에 접목시킬 수 있습니다. 짧은 시간에 이 system을 구축하는 일은 쉽지 않았지만 이 프로젝트를 통해 IoT에 대해 많은 것을 배울 수 있었고, 차후 Artik과 같은 소형 IoT platform을 통해 직접 IoT 시스템을 구축할 수 있다는 자신감을 얻었습니다.
