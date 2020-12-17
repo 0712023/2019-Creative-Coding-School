@@ -54,7 +54,7 @@ Tinkercad를 활용하여 직접 제가 원하는 사이즈의 3D 화분을 구�
       - 실외 센서 &xrarr; 실내 센서 : 인원 1 증가<br>
   - 혼잡도
       - Fitness center를 이용하기에 쾌적한 인원 기준은 fitness center의 규모에 따라 다르지만 demo에서는 빠른 시연을 위해 다음 표를 기준으로 결과를 도출해냈습니다.<br>
-  &nbsp;<table border="1">
+ <table border="1">
   	<th>인원</th>
   	<th>현황</th>
   	<tr>
