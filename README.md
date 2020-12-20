@@ -1,4 +1,4 @@
-# 2019 Creative IoT Coding School
+# Fitness Center IoT System
 
 ## Project Synopsis
 - 행사명 : 2019 IoT 창의 코딩스쿨
