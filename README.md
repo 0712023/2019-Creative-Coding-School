@@ -1,4 +1,5 @@
 # Fitness Center IoT System
+## Keywords
 
 ## Contents
 - Project Synopsis
