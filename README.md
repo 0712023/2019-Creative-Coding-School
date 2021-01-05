@@ -1,11 +1,22 @@
 # Fitness Center IoT System
 
+## Contents
+- Project Synopsis
+  - Purpose
+  - Tools
+- Project Details
+  - Mini Project: 창의 컵 만들기
+  - Final Project: 헬스장 실시간 혼잡도 파악
+  - Demo Video
+- Review
+
 ## Project Synopsis
 - 행사명 : 2019 IoT 창의 코딩스쿨
 - 주최 : 성균관대학교 LINC+사업단, 성균관대학교 IoT UNIC
 - 주관 : 성균관대학교 LINC+사업단, 수원
 - 진행 기간 : '19.1.7 ~ '19.1.14
 - 내용 : 변화하는 4차 산업혁명 및 Digital transformation 시대에 발맞춰 젊은 인재를 찾아 육성하는 프로그램인 2019 IoT 창의 코딩스쿨은 IoT 교육, 컴퓨팅 사고력, 창의성 및 코딩 능력 향상을 목적으로 하였습니다. 약 일주일 동안 삼성 Artik IoT Platform을 활용하여 다양한 센서의 제어 및 C언어 프로그래밍을 배울 수 있었고, 팀 프로젝트를 통해 최종발표회를 거쳐 시상식을 진행했습니다.
+
 ### Purpose
 Fitness center 환경을 가정하여 이용자가 직접 방문하지 않고도 많은 인원이 사용 중이어서 붐비는지, 또는 한산한 환경인지를 실시간으로 체크하여 이용자의 최적화된 fitness routine을 계획할 수 있게 하는 것이 목표입니다.
 ### Tools
@@ -48,7 +59,7 @@ Tinkercad를 활용하여 직접 제가 원하는 사이즈의 3D 화분을 구�
   			<td>10~30</td>
   	</tr>
   </table>
-  
+
     - 인원 감지
       - 실내 센서 &xrarr; 실외 센서 : 인원 1 감소<br>
       - 실외 센서 &xrarr; 실내 센서 : 인원 1 증가<br>
